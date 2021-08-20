@@ -1,10 +1,9 @@
-const app = require("express")()
-const server = require("http").createServer(app)
-const port = process.env.PORT || "8080"
-const message = process.env.TARGET || 'Hello World'
+const app = require("express")();
+const server = require("http").createServer(app);
+const port = process.env.PORT || "8080";
+const message = process.env.TARGET || "Hello World!!";
 
-app.get('/', (req, res) => res.send(message))
+app.get("/", (req, res) => res.send(message));
 server.listen(port, function () {
-    console.log(`App listening on ${port}`)
+  console.log(`App listening on ${port}`);
 });
-
