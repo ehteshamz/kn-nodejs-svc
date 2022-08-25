@@ -1,7 +1,7 @@
 const app = require("express")();
 const server = require("http").createServer(app);
 const port = process.env.PORT || "8080";
-const message = "Hey " + process.env.TARGET || "bz!!";
+const message = "Hi " + process.env.TARGET || "bz!!";
 
 app.get("/", (req, res) => res.send(message));
 server.listen(port, function () {
